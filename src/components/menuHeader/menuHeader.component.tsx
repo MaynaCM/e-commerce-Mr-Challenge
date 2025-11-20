@@ -1,70 +1,81 @@
 "use client";
 import {
   Box,
+  Button,
   Flex,
   HStack,
   IconButton,
-  Button,
-  Text,
-  InputGroup as InputIcon,
+  Link,
   Spacer,
-  Group,
-  Input,
+  Text,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { useColorMode, useColorModeValue } from "../ui/color-mode";
-import { FiShoppingCart, FiSearch } from "react-icons/fi";
+import { IoIosSunny, IoIosMoon } from "react-icons/io";
+import { useColorMode } from "../ui/color-mode";
+import { FiShoppingCart } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 
 const MenuHeader = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { t } = useTranslation();
 
   return (
     <Box
       as="header"
-      bg={useColorModeValue("white", "gray.800")}
+      bg="bg"
       px={6}
-      py={3}
-      shadow="sm"
+      py={2}
       position="sticky"
       top="0"
       zIndex="10"
+      boxShadow="0 4px 4px -2px rgba(0,0,0,0.15)"
     >
       <Flex alignItems="center">
-        <Text
-          fontWeight="bold"
-          fontSize="xl"
-          color={useColorModeValue("teal.600", "teal.300")}
-        >
-          MyStore
+        {/* Logo */}
+        <Text fontWeight="700" fontSize="xl" color="text" mr={8}>
+          Sneakers
         </Text>
 
-        <Group maxW="400px" ml={8}>
-          <InputIcon startElement={<FiSearch size={15} />}>
-            <Input
-              placeholder="Buscar produtos..."
-              bg={useColorModeValue("gray.50", "gray.700")}
-              _placeholder={{ color: "gray.400" }}
-              borderRadius="lg"
-            />
-          </InputIcon>
-        </Group>
+        <HStack gap={4} alignItems="center">
+          <Link fontSize={14} color={"text"}>
+            {t("MENU.PRODUCTS")}
+          </Link>
+          <Link fontSize={14} color={"text"}>
+            {t("MENU.WOMEN")}
+          </Link>
+          <Link fontSize={14} color={"text"}>
+            {t("MENU.MEN")}
+          </Link>
+        </HStack>
 
         <Spacer />
+        {/* Right actions */}
+        <HStack gap={3} margin={4}>
+          <IconButton
+            aria-label="Carrinho"
+            variant="ghost"
+            color="text"
+            _hover={{ backgroundColor: "paleOrange", color: "darkOrange" }}
+          >
+            <FiShoppingCart size={18} />
+          </IconButton>
 
-        <HStack margin={4}>
-          <Button colorScheme="teal" size="sm">
+          <Button
+            size="sm"
+            bg="primary"
+            color="white"
+            _hover={{ backgroundColor: "paleOrange", color: "darkOrange" }}
+          >
             Entrar
           </Button>
-          <IconButton aria-label="Carrinho" variant="ghost">
-            <FiShoppingCart size={10} />
-          </IconButton>
 
           <IconButton
             aria-label="Alternar tema"
             onClick={toggleColorMode}
             variant="ghost"
+            color="text"
+            _hover={{ backgroundColor: "paleOrange", color: "darkOrange" }}
           >
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            {colorMode === "light" ? <IoIosMoon /> : <IoIosSunny />}
           </IconButton>
         </HStack>
       </Flex>

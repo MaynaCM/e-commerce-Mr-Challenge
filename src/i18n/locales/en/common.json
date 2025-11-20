@@ -1,0 +1,22 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "LANGUAGE": "Language"
+  },
+  "BUTTONS": {
+    "ENGLISH": "English",
+    "PORTUGUESE": "Portuguese",
+    "SAVE": "Save",
+    "CANCEL": "Cancel"
+  },
+  "ABOUT": {
+    "TITLE": "About the Project",
+    "DESCRIPTION": "This application is an example using React Router v7, Chakra UI System, and i18n."
+  },
+    "MENU":{
+    "PRODUCTS": "Produtos",
+    "WOMEN": "Feminino",
+    "MEN": "Masculino"
+  }
+}
