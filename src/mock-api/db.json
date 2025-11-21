@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nike Air Max 90",
+      "brand": "Nike",
+      "price": 699.99,
+      "gender": "unisex",
+      "category": "running",
+      "colors": ["white", "black", "red"],
+      "sizes": [38, 39, 40, 41, 42, 43],
+      "description": "Confortável e estiloso para corridas e uso diário.",
+      "image": "/images/airmax90.png"
+    },
+    {
+      "id": 2,
+      "name": "Adidas Ultraboost 23",
+      "brand": "Adidas",
+      "price": 899.99,
+      "gender": "female",
+      "category": "performance",
+      "colors": ["pink", "white"],
+      "sizes": [34, 35, 36, 37, 38, 39],
+      "description": "Tecnologia Boost para máximo conforto.",
+      "image": "/images/ultraboost.png"
+    },
+    {
+      "id": 3,
+      "name": "Puma Suede Classic",
+      "brand": "Puma",
+      "price": 499.90,
+      "gender": "male",
+      "category": "casual",
+      "colors": ["blue", "gray"],
+      "sizes": [39, 40, 41, 42, 43, 44],
+      "description": "Modelo clássico e urbano.",
+      "image": "/images/puma-suede.png"
+    }
+  ],
+
+  "categories": [
+    { "id": "running", "label": "Running" },
+    { "id": "casual", "label": "Casual" },
+    { "id": "performance", "label": "Performance" }
+  ],
+
+  "cart": []
+}

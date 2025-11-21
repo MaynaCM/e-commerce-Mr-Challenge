@@ -10,12 +10,15 @@ import { FiSearch } from "react-icons/fi";
 
 const SearchInput = () => {
   return (
-    <Box
-    >
+    <Box>
       <Group maxW="400px" ml={8}>
         <InputIcon
           startElement={
-            <FiSearch size={15} color="var(--chakra-colors-subtext)" />
+            <FiSearch
+              data-testid="search-icon"
+              size={15}
+              color="var(--chakra-colors-subtext)"
+            />
           }
         >
           <Input

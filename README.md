@@ -1,75 +1,70 @@
-# React + TypeScript + Vite
+# 🛒 E-Commerce React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um e-commerce simples desenvolvido com **React + TypeScript + Vite**, usando **Chakra UI v3** para interface e uma **Mock API local** criada dentro do próprio projeto para listar produtos, filtrar e simular carrinho.
 
-Currently, two official plugins are available:
+O objetivo é servir como exercício prático de front-end, incluindo:
+- Componentização
+- Busca e filtros
+- Chakra UI 3 com tema customizado
+- Consumo de API mockada
+- Testes com Jest + React Testing Library
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Como Rodar o Projeto
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 1. Instalar dependências
+```bash
+npm install
 
-Note: This will impact Vite dev & build performances.
+### 2. Rodar o frontend (Vite)
+```bash
+npm run dev
 
-## Expanding the ESLint configuration
+## 📦 Scripts Disponíveis
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Script             | Descrição                    |
+| ------------------ | ---------------------------- |
+| `npm run dev`      | Inicia o frontend com Vite   |
+| `npm run build`    | Gera build de produção       |
+| `npm run preview`  | Pré-visualiza o build        |
+| `npm run lint`     | Executa o ESLint             |
+| `npm run mock-api` | Inicia a Mock API local      |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| `npm test`
+Mock API (Local)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+A mock API está localizada em:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+src/
+ └── mock-api/
+       ├── server.js
+       ├── products.json
+       └── cart.json
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🔗 Endpoints Disponíveis
+Produtos
+GET /products
+GET /products?category=running
+GET /products?gender=feminino
+GET /products?search=air
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Carrinho
+GET /cart
+POST /cart
+DELETE /cart/:id
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🧪 Testes
+
+Rodar os testes:
+
+npm test
+
+
+Tecnologias de teste:
+
+Jest
+
+React Testing Library
+
+jsdom
