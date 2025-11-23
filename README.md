@@ -49,15 +49,15 @@ src/
 ### 🔗 Endpoints Disponíveis
 
 Produtos
-GET /products
-GET /products?category=running
-GET /products?gender=feminino
-GET /products?search=air
+- GET /products
+- GET /products?category=running
+- GET /products?gender=feminino
+- GET /products?search=air
 
 Carrinho
-GET /cart
-POST /cart
-DELETE /cart/:id
+- GET /cart
+- POST /cart
+- DELETE /cart/:id
 
 ---
 
@@ -65,8 +65,6 @@ DELETE /cart/:id
 
 Tecnologias de teste:
 
-Jest
-
-React Testing Library
-
-jsdom
+- Jest
+- React Testing Library
+- jsdom
