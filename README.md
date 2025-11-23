@@ -16,10 +16,12 @@ O objetivo é servir como exercício prático de front-end, incluindo:
 ### 1. Instalar dependências
 ```bash
 npm install
+```
 
 ### 2. Rodar o frontend (Vite)
 ```bash
 npm run dev
+```
 
 ## 📦 Scripts Disponíveis
 
@@ -30,9 +32,11 @@ npm run dev
 | `npm run preview`  | Pré-visualiza o build        |
 | `npm run lint`     | Executa o ESLint             |
 | `npm run mock-api` | Inicia a Mock API local      |
+| `npm test`         | Roda os testes               |
 
-| `npm test`
-Mock API (Local)
+--- 
+
+## Mock API (Local)
 
 A mock API está localizada em:
 
@@ -42,7 +46,8 @@ src/
        ├── products.json
        └── cart.json
 
-🔗 Endpoints Disponíveis
+### 🔗 Endpoints Disponíveis
+
 Produtos
 GET /products
 GET /products?category=running
@@ -54,12 +59,9 @@ GET /cart
 POST /cart
 DELETE /cart/:id
 
-🧪 Testes
+---
 
-Rodar os testes:
-
-npm test
-
+## 🧪 Testes
 
 Tecnologias de teste:
 
