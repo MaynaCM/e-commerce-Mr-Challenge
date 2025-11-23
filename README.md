@@ -1,6 +1,7 @@
 # 🛒 E-Commerce React + TypeScript + Vite
 
-Este projeto é um e-commerce simples desenvolvido com **React + TypeScript + Vite**, usando **Chakra UI v3** para interface e uma **Mock API local** criada dentro do próprio projeto para listar produtos, filtrar e simular carrinho.
+Este repositório é um pequeno projeto open source colaborativo desenvolvido entre a mentora (eu) e minha mentorada, como parte das atividades do WorldWide Women in Tech.
+Todo o fluxo foi pensado para simular um ambiente profissional de engenharia e reforçar boas práticas de colaboração.
 
 O objetivo é servir como exercício prático de front-end, incluindo:
 - Componentização
@@ -34,6 +35,7 @@ npm run dev
 | `npm run mock-api` | Inicia a Mock API local      |
 | `npm test`         | Roda os testes               |
 
+
 --- 
 
 ## Mock API (Local)
@@ -60,6 +62,14 @@ Carrinho
 - DELETE /cart/:id
 
 ---
+## Atualizando Tema Chakra UI
+
+Para garantir que o TypeScript reconheça corretamente todos os tokens, cores, espaçamentos e componentes personalizados definidos no tema, é necessário gerar automaticamente as tipagens (type definitions)
+Para isso use o comando:
+
+`npx @chakra-ui/cli typegen src/theme.ts`
+
+---
 
 ## 🧪 Testes
 
@@ -68,3 +78,59 @@ Tecnologias de teste:
 - Jest
 - React Testing Library
 - jsdom
+
+## 🔄 Fluxo de Trabalho via Pull Requests
+
+### 1. Criar uma branch para cada tarefa
+Sempre crie uma nova branch baseada na main.
+
+Exemplos de nomes válidos:
+
+- feature/header
+- feature/product-filter
+- fix/cart-item-update
+- refactor/product-card
+- chore/update-readme
+
+### 2. Nada é commitado diretamente na main
+
+A main é sempre protegida.
+Todas as mudanças devem passar por revisão antes do merge.
+
+### 3. Abrir um Pull Request
+
+Ao finalizar a tarefa, abra um PR contendo:
+
+- Título claro (ex: “Add product filter by gender”)
+- Descrição objetiva explicando o que foi feito
+- Checklist, quando necessário (ex.: testes, responsividade, etc.)
+
+### 4. Revisão de Código (Code Review)
+
+A revisão será feita pela mentora, com foco em:
+
+- Boas práticas de React + TypeScript
+- Arquitetura e organização dos componentes
+- Acessibilidade (a11y)
+- Responsividade
+- Clareza e legibilidade do código
+- Oportunidades de refatoração
+- Pontos de aprendizado para evolução contínua
+
+Após ajustes solicitados e aprovação, o PR será mesclado na main.
+
+### 5. Após o merge
+
+A tarefa é considerada concluída
+
+A próxima feature deve começar a partir da main atualizada
+
+---
+
+## Links úteis
+
+### Figma: 
+- 👉 [link](https://www.figma.com/design/McZJ53lQZC8JNEntmjKz1h/Untitled?t=O4tTY9rGaXdGlAAa-1)
+
+### Chakra UI Doc
+- 👉 [ChakraUI Doc](https://chakra-ui.com/docs/components/concepts/overview)
